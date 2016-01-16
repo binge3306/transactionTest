@@ -26,6 +26,7 @@ public class TransactionTest {
 	@Test
 	public void testList() {
 		List<User> list = userService.getUsers();
+		System.out.println("dev");
 		for (User user : list) {
 			log.info(user);
 		}
