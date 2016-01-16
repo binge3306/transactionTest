@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.gdupt.dao.UserMapper">
+
+	<resultMap id="BaseResultMap"
+		type="com.gdupt.entity.User">
+		<id column="id" property="id" jdbcType="VARCHAR" />
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="password" property="password" jdbcType="VARCHAR" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,name,password
+	</sql>
+
+	<select id="getUsersByPage" resultMap="BaseResultMap"
+		flushCache="true" useCache="false">
+		select
+		<include refid="Base_Column_List" />
+		from user where id>#{id,jdbcType=DECIMAL} order by id asc
+	</select>
+	
+	<select id="getUsers" resultMap="BaseResultMap"
+		flushCache="true" useCache="false">
+		select
+		<include refid="Base_Column_List" />
+		from user  order by id asc
+	</select>
+	
+	<insert id="add" parameterType="com.gdupt.entity.User">
+			insert into user (name,password) 
+			values(#{name,jdbcType=VARCHAR},#{password,jdbcType=VARCHAR})
+	</insert>
+	
+	<update id="updateUser" parameterType="com.gdupt.entity.User">
+		update user set
+		 name = #{name,jdbcType=VARCHAR},
+      password = #{password,jdbcType=VARCHAR}
+      where id=#{id,jdbcType=DECIMAL}
+	</update>
+</mapper>
