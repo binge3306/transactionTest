@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="0.248" errors="1" skipped="0" tests="1" name="com.gdupt.test.TransactionTest">
+<testsuite failures="0" time="1.905" errors="0" skipped="0" tests="2" name="com.gdupt.test.TransactionTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="F:\Program Files\Java\jdk1.7.0_79\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 8.1"/>
-    <property name="classworlds.conf" value="F:\study\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf1373366763735506376.tmp"/>
+    <property name="classworlds.conf" value="F:\study\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf402219412130766014.tmp"/>
     <property name="sun.jnu.encoding" value="GBK"/>
     <property name="java.library.path" value="F:\Program Files\Java\jdk1.7.0_79\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;F:/Program Files/Java/jdk1.7.0_79/bin/../jre/bin/server;F:/Program Files/Java/jdk1.7.0_79/bin/../jre/bin;F:/Program Files/Java/jdk1.7.0_79/bin/../jre/lib/amd64;F:\Program Files\Java\jdk1.7.0_79\bin;C:\ProgramData\Oracle\Java\javapath;D:\app\dell\product\11.2.0\dbhome_1\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Windows Live\Shared；;;D:\apache-maven-3.0.4\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\cmd;F:\Program Files\TortoiseGit\bin;F:\Program Files\TortoiseSVN\bin;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\Git\bin;;F:\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -60,46 +60,6 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase time="0.007" classname="com.gdupt.test.TransactionTest" name="initializationError">
-    <error message="LUserService;" type="java.lang.NoClassDefFoundError">java.lang.NoClassDefFoundError: LUserService;
-	at java.lang.Class.getDeclaredFields0(Native Method)
-	at java.lang.Class.privateGetDeclaredFields(Class.java:2499)
-	at java.lang.Class.getDeclaredFields(Class.java:1811)
-	at org.junit.runners.model.TestClass.&lt;init&gt;(TestClass.java:49)
-	at org.junit.runners.ParentRunner.&lt;init&gt;(ParentRunner.java:75)
-	at org.junit.runners.BlockJUnit4ClassRunner.&lt;init&gt;(BlockJUnit4ClassRunner.java:57)
-	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.&lt;init&gt;(SpringJUnit4ClassRunner.java:105)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526)
-	at org.junit.internal.builders.AnnotatedBuilder.buildRunner(AnnotatedBuilder.java:29)
-	at org.junit.internal.builders.AnnotatedBuilder.runnerForClass(AnnotatedBuilder.java:21)
-	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
-	at org.junit.internal.builders.AllDefaultPossibilitiesBuilder.runnerForClass(AllDefaultPossibilitiesBuilder.java:26)
-	at org.junit.runners.model.RunnerBuilder.safeRunnerForClass(RunnerBuilder.java:59)
-	at org.junit.internal.requests.ClassRequest.getRunner(ClassRequest.java:26)
-	at org.apache.maven.surefire.junit4.JUnit4TestSet.execute(JUnit4TestSet.java:51)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:123)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:104)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:606)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:164)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:110)
-	at org.apache.maven.surefire.booter.SurefireStarter.invokeProvider(SurefireStarter.java:175)
-	at org.apache.maven.surefire.booter.SurefireStarter.runSuitesInProcessWhenForked(SurefireStarter.java:107)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:68)
-Caused by: java.lang.ClassNotFoundException: UserService
-	at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
-	at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
-	at java.security.AccessController.doPrivileged(Native Method)
-	at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
-	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
-	at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
-	... 29 more
-</error>
-  </testcase>
+  <testcase time="1.495" classname="com.gdupt.test.TransactionTest" name="testAdd"/>
+  <testcase time="0.029" classname="com.gdupt.test.TransactionTest" name="testList"/>
 </testsuite>
