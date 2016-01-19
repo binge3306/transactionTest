@@ -36,7 +36,7 @@ public class TransactionTest {
 	@Test
 	public void testAdd() {
 		User u = new User();
-		u.setName("测试");
+		u.setName("测试999");
 		u.setPassword("5354");
 		int i = userService.addUser(u);
 		log.info(i);
